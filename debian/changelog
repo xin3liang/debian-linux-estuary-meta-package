@@ -1,4 +1,4 @@
-linux-reference-latest (1) UNRELEASED; urgency=medium
+linux-reference-latest (1) unstable; urgency=medium
 
   * Initial package:
     - Meta package for the linux reference package, available as part of the
