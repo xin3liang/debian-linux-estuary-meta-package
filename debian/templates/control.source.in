@@ -1,9 +1,8 @@
-Source: linux-latest
+Source: linux-latest-reference
 Section: kernel
 Priority: optional
-Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
-Uploaders: Bastian Blank <waldi@debian.org>, Frederik Schüler <fs@debian.org>, Ben Hutchings <ben@decadent.org.uk>
-Standards-Version: 3.9.5
+Maintainer: Ricardo Salveti de Araujo <ricardo.salveti@linaro.org>
+Standards-Version: 3.9.6
 Build-Depends: debhelper (>> 7)
-Vcs-Git: https://anonscm.debian.org/git/kernel/linux-latest.git
-Vcs-Browser: https://anonscm.debian.org/cgit/kernel/linux-latest.git
+Vcs-Git: https://github.com/96boards/debian-linux-latest-reference.git
+Vcs-Browser: https://github.com/96boards/debian-linux-latest-reference.git

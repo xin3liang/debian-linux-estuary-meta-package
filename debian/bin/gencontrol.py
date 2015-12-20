@@ -82,7 +82,7 @@ class Gencontrol(Base):
                                  'debug-info', False):
             templates.extend(self.templates["control.image-dbg.latest"])
             substitute_file('lintian-overrides.image-dbg',
-                            'debian/linux-image-%s-dbg.lintian-overrides' %
+                            'debian/linux-image-reference-%s-dbg.lintian-overrides' %
                             vars['flavour'])
             substitute_file('lintian-overrides.source',
                             'debian/source.lintian-overrides',
@@ -130,36 +130,6 @@ class Gencontrol(Base):
         bug_presubj = self.substitute(
             self.templates["bug-presubj.image.latest"], vars)
         codecs.open("debian/%s.bug-presubj" % packages_dummy[0]['Package'], 'w', 'utf-8').write(bug_presubj)
-
-    def do_extra(self, packages, makefile):
-        templates_extra = self.templates["control.extra"]
-
-        packages.extend(self.process_packages(templates_extra, {}))
-        extra_arches = {}
-        for package in templates_extra:
-            arches = package['Architecture']
-            for arch in arches:
-                i = extra_arches.get(arch, [])
-                i.append(package)
-                extra_arches[arch] = i
-        archs = sorted(extra_arches.keys())
-        for arch in archs:
-            if arch == 'all':
-                arch_var = ''
-                target = 'binary-indep'
-            else:
-                arch_var = "ARCH='%s'" % arch
-                target = 'binary-arch_%s' % arch
-            cmds = []
-            for i in extra_arches[arch]:
-                if 'X-Version-Overwrite-Epoch' in i:
-                    version = '-v1:%s' % self.package_version
-                else:
-                    version = '-v%s' % self.package_version
-                cmds += self.get_link_commands(i, ['config', 'postinst', 'templates'])
-                cmds.append("$(MAKE) -f debian/rules.real install-dummy %s DH_OPTIONS='-p%s' GENCONTROL_ARGS='%s'" % (arch_var, i['Package'], version))
-            makefile.add(target, [target + '_extra'])
-            makefile.add(target + '_extra', cmds = cmds)
 
     def process_real_image(self, entry, fields, vars):
         entry = self.process_package(entry, vars)
