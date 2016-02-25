@@ -1,3 +1,9 @@
+linux-reference-latest (6) UNRELEASED; urgency=medium
+
+  * Bump ABI: 4.4.0-97
+
+ -- Ricardo Salveti de Araujo <rsalveti@rsalveti.net>  Thu, 25 Feb 2016 17:53:58 -0300
+
 linux-reference-latest (5) jessie; urgency=medium
 
   * Bump ABI: 4.4.0-93
