@@ -1,3 +1,9 @@
+linux-reference-latest (20) UNRELEASED; urgency=medium
+
+  * Bump ABI: 4.4.0-135
+
+ -- Fathi Boudra <fathi.boudra@linaro.org>  Wed, 29 Jun 2016 00:05:29 +0300
+
 linux-reference-latest (19) jessie; urgency=medium
 
   * Bump ABI: 4.4.0-133
