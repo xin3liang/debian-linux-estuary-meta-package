@@ -1,4 +1,4 @@
-linux-reference-latest (24) UNRELEASED; urgency=medium
+linux-reference-latest (24) jessie; urgency=medium
 
   * Bump ABI: 4.9.0-188
 
