@@ -1,4 +1,4 @@
-Package: linux-reference-perf
+Package: linux-estuary-perf
 Architecture: all
 Depends: linux-perf-@upstreamversion@, ${misc:Depends}
 Description: Performance analysis tools for Linux (meta-package)

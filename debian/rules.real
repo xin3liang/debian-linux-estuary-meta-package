@@ -33,19 +33,19 @@ install-dummy:
 	dh_prep
 	$(MAKE) -f debian/rules.real install-base
 
-install-doc: PACKAGE_NAME = linux-reference-doc
+install-doc: PACKAGE_NAME = linux-estuary-doc
 install-doc: DH_OPTIONS = -p$(PACKAGE_NAME)
 install-doc:
 	dh_prep
 	$(MAKE) -f debian/rules.real install-base
 
-install-source: PACKAGE_NAME = linux-reference-source
+install-source: PACKAGE_NAME = linux-estuary-source
 install-source: DH_OPTIONS = -p$(PACKAGE_NAME)
 install-source:
 	dh_prep
 	$(MAKE) -f debian/rules.real install-base
 
-install-perf: PACKAGE_NAME = linux-reference-perf
+install-perf: PACKAGE_NAME = linux-estuary-perf
 install-perf: DH_OPTIONS = -p$(PACKAGE_NAME)
 install-perf:
 	dh_prep

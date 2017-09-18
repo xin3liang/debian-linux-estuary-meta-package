@@ -1,4 +1,4 @@
-Package: linux-reference-doc
+Package: linux-estuary-doc
 Section: doc
 Architecture: all
 Depends: linux-doc-@upstreamversion@, ${misc:Depends}

@@ -1,1 +1,1 @@
-linux-reference-latest source: dbg-package-missing-depends linux-image-reference-@flavour@-dbg
+linux-estuary-latest source: dbg-package-missing-depends linux-image-estuary-@flavour@-dbg

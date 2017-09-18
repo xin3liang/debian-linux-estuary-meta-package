@@ -1,4 +1,4 @@
-Package: linux-headers-reference@localversion@
+Package: linux-headers-estuary@localversion@
 Depends: linux-headers-@abiname@@localversion@, ${misc:Depends}
 Description: Header files for Linux @flavour@ configuration (meta-package)
  This package depends on the architecture-specific header files for the latest
